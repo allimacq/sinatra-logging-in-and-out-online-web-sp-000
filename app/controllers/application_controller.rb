@@ -29,27 +29,6 @@ class ApplicationController < Sinatra::Base
     else
       erb :error
     end
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    if Helpers.is_logged_in?(session) == false
-      erb :error
-    else
-      @user = Helpers.current_user(session)
-      erb :account
-    end
   end
 
   get '/logout' do
